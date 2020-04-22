@@ -1,0 +1,60 @@
+日本語ファイルの文字化けを回避する
+　　日本語のファイル名を表示できるようにする
+    　$ git config --local core.quotepath false
+    　※--localのオプションがついているため、このgitリポジトリのみの設定です
+    全体に適用したい場合
+    　$ git config --global core.quotepath false
+    　※--localではなく--globalをつければ良い。
+
+
+参照:
+        https://dev.classmethod.jp/articles/git-avoid-illegal-charactor-tips/
+
+Gitの初期設定
+　・Gitの設定をする
+        1.ユーザー名の設定
+        　　git config --global user.name  ****
+        2.メールドレスの設定
+        　　git config --global user.email ****
+　・設定値の確認をする
+        git config --list
+　・特定の設定値を確認する
+        例：ユーザー名の場合
+        　git config user.name
+  ・利用するエディタを設定する
+  　　　git config --global core.editor "code --wait"
+         ※code  →Visual Studio等、PATH登録されている場合
+　・設定を削除する場合
+    　git config --global --uset 設定項目名
+
+ローカルリポジトリの作成
+　　・適用するディレクトリにて、下記のコマンドを実行する
+　　　　git init
+ローカルリポジトリの状態を確認する
+ 　・git status 
+ステージングエリアに登録する
+　 ・git add ファイル名
+　　カレントディレクトリ配下の全てのファイルを追加
+     ・git add .
+    「subDirectory」ディレクトリ配下の全てのファイルを追加
+     ・git add subDirectory
+     「sunDirectory」ディレクトリ配下のファイルの特定のファイルを追加
+     ・git add subDirectory/****
+
+パッケージマネージャー
+ Windows　　
+    ・chocolatey
+    　　　Ubuntu/Debian系でよく使われるパッケージ管理の apt-get が
+        　Windows版でchocolateyになったと思えばいいと思う.
+    　参照：
+　      Chocolateyを使った環境構築の時のメモ
+　　    https://qiita.com/konta220/items/95b40b4647a737cb51aa
+    ・Scoo　　
+
+      参照：
+        https://qiita.com/Dooteeen/items/12dc8fb14042888113d0
+ Mac
+    ・Homebrew
+    　　MacOS用のパッケージ管理システム
+    　参照：
+    　　https://qiita.com/balius_1064/items/ac7dff5ef10eaf69996f
